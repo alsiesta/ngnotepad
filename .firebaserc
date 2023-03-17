@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-5c95c": {
+      "hosting": {
+        "getstarted": [
+          "test-5c95c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-5c95c"
+  }
+}
