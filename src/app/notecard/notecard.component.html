@@ -1,16 +1,33 @@
-<p>notecard</p>
 
-<!-- public und ohne getter/setter
+<!-- ###########Observable direkt eingebunden########### -->
+<!-- ###########COMMENT-IN IF YOU WANT TO USE OBSERVABLE DIRECTLY########### -->
+
+<!-- <p>{{firestoreService.title}}</p>
 
 <ng-template [ngIf]="firestoreService.usersArr">
 
-    <div *ngFor="let user of firestoreService.usersArr; let i=index">
+    <div *ngFor="let user of firestoreService.users$ | async; let i=index">
+        {{i+1}}. <b>{{user.name}}</b>, Phone: {{user.phone}}, Address: {{user.address}}<br><br>
+    </div>
+
+</ng-template> -->
+<!-- ###########COMMENT-IN IF YOU WANT TO USE OBSERVABLE DIRECTLY########### -->
+
+<!-- public und ohne getter/setter -->
+<!-- <p>{{firestoreService.title}}</p>
+
+<ng-template [ngIf]="firestoreService.usersArr">
+
+    <div *ngFor="let user of firestoreService.users$ | async; let i=index">
         {{i+1}}. <b>{{user.name}}</b>, Phone: {{user.phone}}, Address: {{user.address}}<br><br>
     </div>
 
 </ng-template> -->
 
+<!-- #################################### -->
+<!-- private Service & getter/setter -->
 
+<p>{{title}}</p>
 <ng-template [ngIf]="usersArr">
 
     <div *ngFor="let user of usersArr; let i=index">
